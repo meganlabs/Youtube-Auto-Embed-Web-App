@@ -16,6 +16,9 @@
         margin-top: 5px;
         white-space: pre-wrap; /* Preserve line breaks */
       }
+      .comment-item {
+        margin-bottom: 15px;
+      }
     </style>
     <title>YouTube Video Embed</title>
   </head>
@@ -35,7 +38,7 @@
           {% if comments %}
             <ul class="list-group">
               {% for comment in comments %}
-                <li class="list-group-item">
+                <li class="list-group-item comment-item">
                   <p class="comment-author">{{ comment.author }}</p>
                   <p class="comment-text">{{ comment.text|safe }}</p>
                 </li>
