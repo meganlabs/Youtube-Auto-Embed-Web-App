@@ -9,19 +9,33 @@
     <style>
       body {
         font-family: 'Roboto', sans-serif;
+        background-color: #000; /* Black background */
+        color: #fff; /* White text */
+      }
+      .navbar, footer {
+        background-color: #333; /* Dark background for header and footer */
+      }
+      .navbar-nav .nav-link {
+        color: #fff !important; /* White text for nav links */
+      }
+      .navbar-nav .nav-link:hover {
+        color: #ccc; /* Lighter color on hover */
       }
       .comment-author {
         font-weight: bold;
+        color: #fff; /* White text */
       }
       .comment-text {
         margin-top: 5px;
         white-space: pre-wrap; /* Preserve line breaks */
+        color: #fff; /* White text */
       }
       .comment-item {
         margin-bottom: 15px;
         border-radius: 15px; /* Rounded edges for comment boxes */
-        border: 1px solid #ddd; /* Border for better visual separation */
+        border: 1px solid #444; /* Border color for comment boxes */
         padding: 10px; /* Padding inside the comment boxes */
+        background-color: #222; /* Dark background for comment boxes */
       }
       .embed-responsive-item {
         border-radius: 15px;
@@ -44,19 +58,22 @@
       .social-reddit { background: #FF4500; }
       .social-telegram { background: #0088cc; }
       footer {
-        background: #f8f9fa;
+        background: #333; /* Dark background for footer */
         padding: 10px 0;
       }
       footer a {
-        color: #007bff;
+        color: #fff !important; /* White text for footer links */
+      }
+      footer a:hover {
+        color: #ccc; /* Lighter color on hover */
       }
     </style>
     <title>YouTube Video Embed</title>
   </head>
   <body>
     <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">My Website</a>
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand text-white" href="#">My Website</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
