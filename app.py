@@ -1,32 +1,12 @@
 import datetime
 from googleapiclient.discovery import build
 from flask import Flask, render_template
+import html
 
 # YouTube API key
 YOUTUBE_API_KEY = 'AIzaSyCYPFUUZr3o_nID_YkCsxCroxySmFup6vk'
 
 app = Flask(__name__)
-
-def search_youtube_video(query):
-    youtube = build('youtube', 'v3', developerKey=YOUTUBE_API_KEY)
-    one_week_ago = (datetime.datetime.utcnow() - datetime.timedelta(days=7)).isoformat("T") + "Z"
-    request = youtube.search().list(
-        part='snippet',
-        q=query,
-        type='video',
-        order='date',
-        publishedAfter=one_week_ago,
-        maxResults=1
-    )
-    response = request.execute()
-    if 'items' in response and len(response['items']) > 0:
-        video = response['items'][0]
-        return {
-            'title': video['snippet']['title'],
-            'url': f"https://www.youtube.com/watch?v={video['id']['videoId']}",
-            'video_id': video['id']['videoId']
-        }
-    return None
 
 def get_youtube_comments(video_id):
     youtube = build('youtube', 'v3', developerKey=YOUTUBE_API_KEY)
@@ -42,8 +22,8 @@ def get_youtube_comments(video_id):
         for item in response['items']:
             comment = item['snippet']['topLevelComment']['snippet']
             comments.append({
-                'author': comment['authorDisplayName'],
-                'text': comment['textDisplay']
+                'author': html.unescape(comment['authorDisplayName']),
+                'text': html.unescape(comment['textDisplay'])
             })
     return comments
 
