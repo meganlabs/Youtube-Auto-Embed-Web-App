@@ -1,28 +1,11 @@
-import praw
 import datetime
 from googleapiclient.discovery import build
 from flask import Flask, render_template
-
-# Reddit credentials
-reddit = praw.Reddit(
-    client_id='yBt2eaNiAEJqLMCsiJW9-w',
-    client_secret='yGDR5CeuQ2ley2kiI6-FXs_U6lEYLw',
-    username='MiserableNothing4078',
-    password='Password@123',
-    user_agent='comment-bot by MiserableNothing4078'
-)
 
 # YouTube API key
 YOUTUBE_API_KEY = 'AIzaSyCYPFUUZr3o_nID_YkCsxCroxySmFup6vk'
 
 app = Flask(__name__)
-
-def get_top_reddit_post(subreddit_name):
-    subreddit = reddit.subreddit(subreddit_name)
-    for submission in subreddit.hot(limit=10):
-        if not submission.stickied:
-            return submission.title
-    return None
 
 def search_youtube_video(query):
     youtube = build('youtube', 'v3', developerKey=YOUTUBE_API_KEY)
@@ -50,7 +33,7 @@ def get_youtube_comments(video_id):
     request = youtube.commentThreads().list(
         part='snippet',
         videoId=video_id,
-        maxResults=5,
+        maxResults=15,
         order='relevance'
     )
     response = request.execute()
