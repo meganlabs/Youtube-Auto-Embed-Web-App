@@ -40,6 +40,12 @@
       .embed-responsive-item {
         border-radius: 15px;
       }
+      .video-title {
+        margin-top: 15px;
+        font-size: 1.2rem;
+        font-weight: bold;
+        text-align: left;
+      }
       .social-buttons {
         margin: 15px 0;
       }
@@ -102,6 +108,7 @@
           <div class="embed-responsive embed-responsive-16by9">
             <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{ video_id }}" allowfullscreen></iframe>
           </div>
+          <div class="video-title">{{ video_title }}</div>
           <div class="social-buttons mt-3">
             <a href="https://api.whatsapp.com/send?text=https://www.youtube.com/watch?v={{ video_id }}" target="_blank" class="social-whatsapp"><i class="fab fa-whatsapp"></i></a>
             <a href="https://twitter.com/intent/tweet?url=https://www.youtube.com/watch?v={{ video_id }}" target="_blank" class="social-twitter"><i class="fab fa-twitter"></i></a>

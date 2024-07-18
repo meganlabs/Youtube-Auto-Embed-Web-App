@@ -7,6 +7,21 @@ YOUTUBE_API_KEY = 'AIzaSyCYPFUUZr3o_nID_YkCsxCroxySmFup6vk'
 
 app = Flask(__name__)
 
+def get_youtube_video_info(video_id):
+    youtube = build('youtube', 'v3', developerKey=YOUTUBE_API_KEY)
+    request = youtube.videos().list(
+        part='snippet',
+        id=video_id
+    )
+    response = request.execute()
+    if 'items' in response and len(response['items']) > 0:
+        video = response['items'][0]
+        return {
+            'title': video['snippet']['title'],
+            'description': video['snippet']['description']
+        }
+    return None
+
 def get_youtube_comments(video_id, max_results=15):
     youtube = build('youtube', 'v3', developerKey=YOUTUBE_API_KEY)
     request = youtube.commentThreads().list(
@@ -28,8 +43,10 @@ def get_youtube_comments(video_id, max_results=15):
 
 @app.route('/yt-embed/<video_id>')
 def yt_embed(video_id):
+    video_info = get_youtube_video_info(video_id)
     comments = get_youtube_comments(video_id, max_results=15)
-    return render_template('video.html', video_id=video_id, comments=comments)
+    return render_template('video.html', video_id=video_id, video_title=video_info['title'], comments=comments)
 
 if __name__ == '__main__':
     app.run(debug=True)
+
