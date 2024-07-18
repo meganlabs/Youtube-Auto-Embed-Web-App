@@ -1,0 +1,1 @@
+now both comment and video appearing correctly. working fine
