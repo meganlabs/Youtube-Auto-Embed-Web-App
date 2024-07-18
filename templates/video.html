@@ -37,7 +37,7 @@
               {% for comment in comments %}
                 <li class="list-group-item">
                   <p class="comment-author">{{ comment.author }}</p>
-                  <p class="comment-text">{{ comment.text }}</p>
+                  <p class="comment-text">{{ comment.text|safe }}</p>
                 </li>
               {% endfor %}
             </ul>
