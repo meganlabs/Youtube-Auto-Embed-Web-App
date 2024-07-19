@@ -1,156 +1,156 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <style>
-      body {
-        font-family: 'Roboto', sans-serif;
-        background-color: #000; /* Black background */
-        color: #fff; /* White text */
-      }
-      .navbar, footer {
-        background-color: #333; /* Dark background for header and footer */
-      }
-      .navbar-nav .nav-link {
-        color: #fff !important; /* White text for nav links */
-      }
-      .navbar-nav .nav-link:hover {
-        color: #ccc; /* Lighter color on hover */
-      }
-      .comment-author {
-        font-weight: bold;
-        color: #fff; /* White text */
-      }
-      .comment-text {
-        margin-top: 5px;
-        white-space: pre-wrap; /* Preserve line breaks */
-        color: #fff; /* White text */
-      }
-      .comment-item {
-        margin-bottom: 15px;
-        border-radius: 15px; /* Rounded edges for comment boxes */
-        border: 1px solid #444; /* Border color for comment boxes */
-        padding: 10px; /* Padding inside the comment boxes */
-        background-color: #222; /* Dark background for comment boxes */
-      }
-      .embed-responsive-item {
-        border-radius: 15px;
-      }
-      .video-title {
-        margin-top: 15px;
-        font-size: 1.2rem;
-        font-weight: bold;
-        text-align: left;
-      }
-      .social-buttons {
-        margin: 15px 0;
-      }
-      .social-buttons a {
-        margin-right: 10px;
-        color: #fff;
-        border-radius: 50%;
-        display: inline-block;
-        width: 40px;
-        height: 40px;
-        line-height: 40px;
-        text-align: center;
-      }
-      .social-whatsapp { background: #25D366; }
-      .social-twitter { background: #1DA1F2; }
-      .social-reddit { background: #FF4500; }
-      .social-telegram { background: #0088cc; }
-      footer {
-        background: #333; /* Dark background for footer */
-        padding: 10px 0;
-      }
-      footer a {
-        color: #fff !important; /* White text for footer links */
-      }
-      footer a:hover {
-        color: #ccc; /* Lighter color on hover */
-      }
-    </style>
-    <title>YouTube Video Embed</title>
-  </head>
-  <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-light">
-      <a class="navbar-brand text-white" href="#">My Website</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#">Privacy Policy</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Terms of Service</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #000; /* Black background */
+      color: #fff; /* White text */
+    }
+    .navbar, footer {
+      background-color: #333; /* Dark background for header and footer */
+    }
+    .navbar-nav .nav-link {
+      color: #fff !important; /* White text for nav links */
+    }
+    .navbar-nav .nav-link:hover {
+      color: #ccc; /* Lighter color on hover */
+    }
+    .comment-author {
+      font-weight: bold;
+      color: #fff; /* White text */
+    }
+    .comment-text {
+      margin-top: 5px;
+      white-space: pre-wrap; /* Preserve line breaks */
+      color: #fff; /* White text */
+    }
+    .comment-item {
+      margin-bottom: 15px;
+      border-radius: 15px; /* Rounded edges for comment boxes */
+      border: 1px solid #444; /* Border color for comment boxes */
+      padding: 10px; /* Padding inside the comment boxes */
+      background-color: #222; /* Dark background for comment boxes */
+    }
+    .embed-responsive-item {
+      border-radius: 15px;
+    }
+    .video-title {
+      margin-top: 15px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      text-align: left;
+    }
+    .social-buttons {
+      margin: 15px 0;
+    }
+    .social-buttons a {
+      margin-right: 10px;
+      color: #fff;
+      border-radius: 50%;
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+    }
+    .social-whatsapp { background: #25D366; }
+    .social-twitter { background: #1DA1F2; }
+    .social-reddit { background: #FF4500; }
+    .social-telegram { background: #0088cc; }
+    footer {
+      background: #333; /* Dark background for footer */
+      padding: 10px 0;
+    }
+    footer a {
+      color: #fff !important; /* White text for footer links */
+    }
+    footer a:hover {
+      color: #ccc; /* Lighter color on hover */
+    }
+  </style>
+  <title>YouTube Video Embed</title>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand text-white" href="#">My Website</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Privacy Policy</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Terms of Service</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
-    <div class="container mt-5">
-      <h1 class="text-center mb-4">YouTube Video Embed</h1>
-      <div class="row justify-content-center mb-4">
-        <div class="col-12 col-md-8">
-          <div class="embed-responsive embed-responsive-16by9">
-            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{ video_id }}?autoplay=1" allowfullscreen></iframe>
-          </div>
-          <div class="video-title">{{ video_title }}</div>
-          <div class="social-buttons mt-3">
-            <a href="https://api.whatsapp.com/send?text=https://www.youtube.com/watch?v={{ video_id }}" target="_blank" class="social-whatsapp"><i class="fab fa-whatsapp"></i></a>
-            <a href="https://twitter.com/intent/tweet?url=https://www.youtube.com/watch?v={{ video_id }}" target="_blank" class="social-twitter"><i class="fab fa-twitter"></i></a>
-            <a href="https://reddit.com/submit?url=https://www.youtube.com/watch?v={{ video_id }}" target="_blank" class="social-reddit"><i class="fab fa-reddit"></i></a>
-            <a href="https://t.me/share/url?url=https://www.youtube.com/watch?v={{ video_id }}" target="_blank" class="social-telegram"><i class="fab fa-telegram-plane"></i></a>
-          </div>
+  <div class="container mt-5">
+    <h1 class="text-center mb-4">YouTube Video Embed</h1>
+    <div class="row justify-content-center mb-4">
+      <div class="col-12 col-md-8">
+        <div class="embed-responsive embed-responsive-16by9 post-embed">
+          <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{ video_id }}?autoplay=1&mute=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
-      </div>
-      <h2 class="text-center mb-4">Comments</h2>
-      <div class="row justify-content-center">
-        <div class="col-12 col-md-8">
-          {% if comments %}
-            <ul class="list-group">
-              {% for comment in comments %}
-                <li class="list-group-item comment-item">
-                  <p class="comment-author">{{ comment.author }}</p>
-                  <p class="comment-text">{{ comment.text|safe }}</p>
-                </li>
-              {% endfor %}
-            </ul>
-          {% else %}
-            <p class="text-center">No comments found.</p>
-          {% endif %}
+        <div class="video-title">{{ video_title }}</div>
+        <div class="social-buttons mt-3">
+          <a href="https://api.whatsapp.com/send?text=https://www.youtube.com/watch?v={{ video_id }}" target="_blank" class="social-whatsapp"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://twitter.com/intent/tweet?url=https://www.youtube.com/watch?v={{ video_id }}" target="_blank" class="social-twitter"><i class="fab fa-twitter"></i></a>
+          <a href="https://reddit.com/submit?url=https://www.youtube.com/watch?v={{ video_id }}" target="_blank" class="social-reddit"><i class="fab fa-reddit"></i></a>
+          <a href="https://t.me/share/url?url=https://www.youtube.com/watch?v={{ video_id }}" target="_blank" class="social-telegram"><i class="fab fa-telegram-plane"></i></a>
         </div>
       </div>
     </div>
-
-    <!-- Footer -->
-    <footer class="text-center mt-5">
-      <div class="container">
-        <p>&copy; 2024 My Website. All rights reserved.</p>
-        <ul class="list-inline">
-          <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
-          <li class="list-inline-item"><a href="#">Terms of Service</a></li>
-          <li class="list-inline-item"><a href="#">About</a></li>
-          <li class="list-inline-item"><a href="#">Contact</a></li>
-        </ul>
+    <h2 class="text-center mb-4">Comments</h2>
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-8">
+        {% if comments %}
+          <ul class="list-group">
+            {% for comment in comments %}
+              <li class="list-group-item comment-item">
+                <p class="comment-author">{{ comment.author }}</p>
+                <p class="comment-text">{{ comment.text|safe }}</p>
+              </li>
+            {% endfor %}
+          </ul>
+        {% else %}
+          <p class="text-center">No comments found.</p>
+        {% endif %}
       </div>
-    </footer>
+    </div>
+  </div>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  </body>
+  <!-- Footer -->
+  <footer class="text-center mt-5">
+    <div class="container">
+      <p>&copy; 2024 My Website. All rights reserved.</p>
+      <ul class="list-inline">
+        <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+        <li class="list-inline-item"><a href="#">Terms of Service</a></li>
+        <li class="list-inline-item"><a href="#">About</a></li>
+        <li class="list-inline-item"><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
 </html>
